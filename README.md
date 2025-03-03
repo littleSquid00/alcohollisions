@@ -12,9 +12,9 @@ To convince him, you decide to demonstrate how two different labels can have the
 
 ## Attachment
 
-<img src="Labels/christmaslabel.jpg" alt="christmaslabel" width="400">
-<img src="Labels/easterlabel.jpg" alt="easterlabel" width="400">
-<img src="Labels/halloweenlabel.jpg" alt="halloweenlabel" width="400">
+<img src="rsc/christmaslabel.jpg" alt="christmaslabel" width="400">
+<img src="rsc/easterlabel.jpg" alt="easterlabel" width="400">
+<img src="rsc/halloweenlabel.jpg" alt="halloweenlabel" width="400">
 
 - Labels are made with Canva by LittleSquid
 
@@ -83,7 +83,7 @@ To convince him, you decide to demonstrate how two different labels can have the
 
 (3) After running the python script, you will find the collision image with same md5.
 
-![collision](Labels/collisionpic.jpg)
+![collision](rsc/collisionpic.jpg)
 
 (4) Upload another EasterLabel image (same md5 but different sha256) and you will get the flag!
 
