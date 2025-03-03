@@ -2,7 +2,7 @@
 
 - Cryptography
 
-#Description
+## Description
 
 Professor Gilbert Winestein is a renowned cybersecurity expert... and an even bigger wine enthusiast! His prized wine collection features exclusive bottles from the renowned vineyard Château AtHack. Every time he adds a new bottle, he struggles to check if it’s already in his collection because comparing all the labels takes forever. To speed up the process, Winestein's friends suggested a clever hack: record the MD5 hash of each label. Since MD5 hashes are short, it would make his collection faster to manage.
 
@@ -10,23 +10,21 @@ But you, a sharp and curious student of his, notice a potential flaw. What if tw
 
 To convince him, you decide to demonstrate how two different labels can have the same MD5 hash but different SHA-256 hashes. Use this information to teach him why relying on MD5 alone might not be the best choice for such a prized collection.
 
-`[HalloweenLabel.jpg]` `[ChristmasLabel.jpg]` `[EasterLabel.jpg]`
+## Attachment
 
-#Attachment
+<img src="Labels/christmaslabel.jpg" alt="christmaslabel" width="400">
+<img src="Labels/easterlabel.jpg" alt="easterlabel" width="400">
+<img src="Labels/halloweenlabel.jpg" alt="halloweenlabel" width="400">
 
-![christmaslabel](Labels/christmaslabel.jpg)
-![easterlabel](Labels/easterlabel.jpg)
-![halloweenlabel](Labels/halloweenlabel.jpg)
+- Labels are made with Canva by LittleSquid
 
-- made with Canva by LittleSquid
-
-#Solution
+## Solution
 
 (1) The participant must first identify the image which was created by a collision attack. Figure this out by looking into collision attacks (of which there are only 3 popular ones)- and notice 128 bytes of garbage at the end of EasterLabel.jpg file. (The garbage is preceded with “1010101…” which is padding. Adding of the padding makes the 128 bytes more obvious.) Once the participant knows it is the EasterLabel.jpg, they can run python script on it.
 
 (2) Run the script
 
-`
+```py
 
     import hashlib # for using md5, sha256
 
@@ -81,13 +79,14 @@ To convince him, you decide to demonstrate how two different labels can have the
         print("HUH?!")
         raise SystemExit(1)
 
-`
+```
+
 (3) After running the python script, you will find the collision image with same md5.
 
 ![collision](Labels/collisionpic.jpg)
 
 (4) Upload another EasterLabel image (same md5 but different sha256) and you will get the flag!
 
-#Flag
+## Flag
 
 ATHACKCTF{y0uar3aSharpStud3nt}
